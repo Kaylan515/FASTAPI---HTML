@@ -14,7 +14,7 @@ body {
     padding: 30px;
 }
 
-
+/* Título */
 h1 {
     text-align: center;
     color: #2c3e50;
@@ -39,6 +39,7 @@ th {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
 /* Classes condicionais */
 .aprovado {
     background-color: #d4edda;
@@ -54,4 +55,42 @@ th {
 tr:hover {
     background-color: #e8f4fd;
     transition: 0.3s;
+}
+
+
+.botao {
+    background: #3498db;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #0996f4;
+}
+
+.voltar {
+    display: block;
+    margin-top: 20px;
+    color: #3498db;
+    text-decoration: none;
+}
+
+form {
+    display: inline-block;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #ccc;
+    margin-top: 20px;
+}
+
+input {
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+    width: 250px;
 }

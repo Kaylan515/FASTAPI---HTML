@@ -27,6 +27,19 @@ alunos = [
 @app.get("/", response_class=HTMLResponse)
 def home(request: Request):
     return templates.TemplateResponse(
-        "index.HTML",
+        "index.html",
         {"request": request, "lista_alunos": alunos}
     )
+
+#Tela de cadastro
+@app.get("/cadastro",response_class=HTMLResponse)
+def tela_cadastro(request: Request):
+    return templates.TemplateResponse(
+        "cadastro.html",
+        {"request": request}
+    )
+
+@app.post("/cadastro")
+def salvar_aluno(nome: str = Form(...), nota: float = Form(...)):
+    alunos.append({"nome": nome, "nota": nota})
+    return RedirectResponse(url="/", status_code=303)
